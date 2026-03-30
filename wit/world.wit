@@ -1,0 +1,15 @@
+package embedded:platform;
+
+interface servo {
+    set-angle: func(pin: u32, angle-deg: u32);
+}
+
+interface timing {
+    delay-ms: func(ms: u32);
+}
+
+world servo-sweep {
+    import servo;
+    import timing;
+    export run: func();
+}
